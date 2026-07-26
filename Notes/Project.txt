@@ -11,6 +11,8 @@ Backend: FastAPI
 Database/Auth: Supabase
 Payments: Razorpay/PhonePe (later)
 Deployment: Vercel (frontend), Render/Railway/Azure (backend)
+
+
 Suggested Folder Structure
 ecommerce/
 │
@@ -82,6 +84,8 @@ ecommerce/
 │
 ├── package.json
 └── vite.config.ts
+
+
 Features
 Customer
 Home
@@ -106,6 +110,8 @@ Customers
 Coupons
 Inventory
 Analytics
+
+
 Redux Slices
 authSlice
 cartSlice
@@ -114,6 +120,8 @@ productSlice
 categorySlice
 orderSlice
 themeSlice
+
+
 Reusable Components
 Navbar
 Footer
@@ -132,6 +140,8 @@ AddressCard
 Loading
 EmptyState
 ErrorPage
+
+
 Suggested Database Tables
 users
 categories
@@ -146,6 +156,8 @@ wishlist
 coupons
 payments
 branding
+
+
 Pages
 /
 products
@@ -161,6 +173,8 @@ login
 register
 forgot-password
 admin
+
+
 Nice Features
 Dark Mode
 Skeleton Loading
@@ -176,6 +190,8 @@ OTP Login
 WhatsApp Order Sharing
 Offline Cart Sync
 PWA Support
+
+
 Suggested Development Order
 Project setup
 Authentication
@@ -195,6 +211,21 @@ Notifications
 AI features
 Performance optimization
 Deployment
+
+✅ Create the React project
+✅ Build the overall layout (Navbar, Footer, Routing)
+✅ Build the Home page
+✅ Build the Product Listing page
+✅ Build the Product Details page
+✅ Build Cart (using local state/Redux)
+✅ Implement Authentication
+✅ Checkout
+✅ Orders
+✅ Admin features
+✅ Payment integration
+
+
+
 Commands to Create the Project
 npm create vite@latest ecommerce -- --template react-ts
 
