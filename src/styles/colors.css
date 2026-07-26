@@ -1,0 +1,23 @@
+:root {
+  --bg: #f5f2e8;
+  --text: #323822;
+  --text-h: #1f2a1f;
+  --border: #d7ceb7;
+  --code-bg: #ece5d6;
+  --accent: #7a8c51;
+  --accent-bg: rgba(122, 140, 81, 0.14);
+  --accent-border: rgba(122, 140, 81, 0.28);
+  --social-bg: rgba(226, 219, 204, 0.45);
+
+  --navbar-bg: #33412e;
+  --navbar-text: #f6f2e7;
+  --navbar-shadow: 0 1px 10px rgba(42, 44, 30, 0.22);
+  --brand-bg: #8b9c6e;
+  --panel-bg: #3d4f34;
+  --text-muted: #a0ad88;
+  --badge-bg: #c07944;
+  --badge-text: #f8f5ec;
+  --surface-soft: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(180, 163, 132, 0.22);
+  --border-muted: rgba(180, 163, 132, 0.32);
+}

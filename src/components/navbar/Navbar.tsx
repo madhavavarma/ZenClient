@@ -1,84 +1,74 @@
 import React from 'react';
-
-type NavItem = {
-  label: string;
-  href?: string;
-  onClick?: () => void;
-};
+import { MapPin, Search, ShoppingCart, User } from 'lucide-react';
+import styles from './Navbar.module.css';
+import '../../styles/colors.css';
 
 type Props = {
   brand?: string;
-  items?: NavItem[];
+  location?: string;
+  cartCount?: number;
+  onSearch?: (query: string) => void;
+  onLogin?: () => void;
+  onCartClick?: () => void;
 };
 
-const styles: { [k: string]: React.CSSProperties } = {
-  container: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: '8px 16px',
-    background: '#0f172a',
-    color: '#fff',
-    boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
-  },
-  brand: {
-    fontWeight: 700,
-    fontSize: 18
-  },
-  nav: {
-    display: 'flex',
-    gap: 12,
-    alignItems: 'center'
-  },
-  link: {
-    color: '#cbd5e1',
-    textDecoration: 'none',
-    padding: '6px 8px',
-    borderRadius: 6,
-    cursor: 'pointer'
-  },
-  linkHover: {
-    color: '#fff',
-    background: 'rgba(255,255,255,0.04)'
-  }
-};
-
-export default function Navbar({ brand = 'Zen', items = [] }: Props) {
-  const [hoverIdx, setHoverIdx] = React.useState<number | null>(null);
+export default function Navbar({
+  brand = 'Zen',
+  location = 'New York, NY',
+  cartCount = 0,
+  onSearch,
+  onLogin,
+  onCartClick,
+}: Props) {
+  const [query, setQuery] = React.useState('');
 
   return (
-    <header style={styles.container}>
-      <div style={styles.brand}>{brand}</div>
-      <nav style={styles.nav} aria-label="main navigation">
-        {items.length === 0 ? (
-          <>
-            <a style={styles.link} href="#" onClick={e => e.preventDefault()}>Home</a>
-            <a style={styles.link} href="#" onClick={e => e.preventDefault()}>About</a>
-            <a style={styles.link} href="#" onClick={e => e.preventDefault()}>Contact</a>
-          </>
-        ) : (
-          items.map((it, idx) => (
-            <a
-              key={idx}
-              href={it.href ?? '#'}
-              onClick={e => {
-                if (it.onClick) {
-                  e.preventDefault();
-                  it.onClick();
-                }
-              }}
-              onMouseEnter={() => setHoverIdx(idx)}
-              onMouseLeave={() => setHoverIdx(null)}
-              style={{
-                ...styles.link,
-                ...(hoverIdx === idx ? styles.linkHover : {})
-              }}
-            >
-              {it.label}
-            </a>
-          ))
-        )}
-      </nav>
+    <header className={styles.navbar}>
+      <div className={styles.left}>
+        <div className={styles.logo}>
+          <span className={styles.logoCircle}>Z</span>
+          <span>{brand}</span>
+        </div>
+      </div>
+
+      <form
+        className={styles.searchForm}
+        onSubmit={(event) => {
+          event.preventDefault();
+          onSearch?.(query);
+        }}
+        role="search"
+      >
+        <Search size={18} color="var(--text-muted)" />
+        <input
+          className={styles.searchInput}
+          type="search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          placeholder="Search products, categories, or help"
+          aria-label="Search"
+        />
+      </form>
+
+      <div className={styles.actions}>
+        <button className={styles.iconButton} onClick={onCartClick} aria-label="Open cart">
+          <ShoppingCart size={20} />
+          {cartCount > 0 && <span className={styles.badge}>{cartCount}</span>}
+        </button>
+
+        <button className={styles.loginButton} onClick={onLogin} type="button">
+          <User size={18} />
+          <span>Login</span>
+        </button>
+
+        <div className={styles.address}>
+          <MapPin size={16} />
+          <div>
+            <div className={styles.addressLabel}>Deliver to</div>
+            <div className={styles.addressLocation}>{location}</div>
+          </div>
+        </div>
+      </div>
     </header>
   );
 }

@@ -7,7 +7,7 @@ export default function MainLayout() {
         <>
             <Navbar />
 
-            <main className="flex flex-col items-center justify-between p-24">
+            <main className="flex flex-col items-center justify-between pt-24 px-6">
                 <Outlet />
             </main>
 
