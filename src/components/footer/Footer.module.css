@@ -1,0 +1,140 @@
+.footer {
+  width: 100%;
+  padding: 42px 24px 24px;
+  background: var(--bg);
+  color: var(--text);
+  border-top: 1px solid var(--border);
+}
+
+.footerInner {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: 32px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 24px;
+  border-bottom: none;
+}
+
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerLogo {
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footerDescription {
+  max-width: 320px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerSectionTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.footerLink {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: var(--accent);
+}
+
+.appButtons {
+  display: grid;
+  gap: 12px;
+}
+
+.appButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: var(--text);
+  background: rgba(122, 140, 81, 0.12);
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition: background 0.2s ease;
+}
+
+.appButton:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.footerBottom {
+  max-width: 1280px;
+  margin: 24px auto 0;
+  padding-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.trademark {
+  flex: 1;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 14px;
+}
+
+.socialLink {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--navbar-text);
+  transition: background 0.2s ease;
+}
+
+.socialLink:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+@media (max-width: 960px) {
+  .footerInner {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 32px 18px 18px;
+  }
+
+  .footerInner {
+    grid-template-columns: 1fr;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
