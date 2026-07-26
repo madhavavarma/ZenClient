@@ -124,11 +124,7 @@
   }
 }
 
-@media (max-width: 640px) {
-  .footer {
-    padding: 32px 18px 18px;
-  }
-
+@media (max-width: 800px) {
   .footerInner {
     grid-template-columns: 1fr;
   }
@@ -136,5 +132,19 @@
   .footerBottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 32px 18px 18px;
+  }
+
+  .footerInner {
+    gap: 24px;
+  }
+
+  .footerBottom {
+    gap: 8px;
   }
 }

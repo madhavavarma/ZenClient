@@ -60,13 +60,13 @@ export default function Navbar({
           <User size={18} />
           <span>Login</span>
         </button>
+      </div>
 
-        <div className={styles.address}>
-          <MapPin size={16} />
-          <div>
-            <div className={styles.addressLabel}>Deliver to</div>
-            <div className={styles.addressLocation}>{location}</div>
-          </div>
+      <div className={styles.address}>
+        <MapPin size={16} />
+        <div>
+          <div className={styles.addressLabel}>Deliver to</div>
+          <div className={styles.addressLocation}>{location}</div>
         </div>
       </div>
     </header>
