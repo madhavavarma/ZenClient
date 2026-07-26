@@ -56,9 +56,8 @@ export default function Navbar({
           {cartCount > 0 && <span className={styles.badge}>{cartCount}</span>}
         </button>
 
-        <button className={styles.loginButton} onClick={onLogin} type="button">
+        <button className={styles.iconButton} onClick={onLogin} type="button" aria-label="Login">
           <User size={18} />
-          <span>Login</span>
         </button>
       </div>
 

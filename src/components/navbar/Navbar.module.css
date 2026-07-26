@@ -6,8 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 12px 24px;
+  gap: 18px;
+  padding: 18px 32px;
   background: var(--navbar-bg);
   color: var(--navbar-text);
   box-shadow: var(--navbar-shadow);
@@ -15,51 +15,22 @@
   flex-wrap: wrap;
 }
 
-.left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex: 1;
-}
-
-.actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
+.left,
+.actions,
+.address,
 .searchForm {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  max-width: 560px;
-  min-width: 220px;
-  gap: 10px;
-  background: var(--panel-bg);
-  border: 1px solid var(--border-light);
-  border-radius: 999px;
-  padding: 10px 14px;
-  min-width: 0;
-}
-
-.address {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border: 1px solid var(--border-muted);
-  border-radius: 999px;
-  padding: 10px 14px;
-  background: var(--surface-soft);
-  color: var(--navbar-text);
-  cursor: default;
-  min-width: 170px;
-  flex-shrink: 0;
-}
-
-.left {
   display: flex;
   align-items: center;
   gap: 12px;
+  /* border: 1px solid var(--border-light); */
+  border-radius: 18px;
+  /* background: var(--surface-soft); */
+  padding: 12px 16px;
+}
+
+.left {
+  flex: 0 0 auto;
+  min-width: 180px;
 }
 
 .logo {
@@ -72,9 +43,9 @@
 }
 
 .logoCircle {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  border-radius: 14px;
   background: var(--brand-bg);
   display: inline-flex;
   align-items: center;
@@ -85,16 +56,11 @@
 
 .searchForm {
   flex: 1;
-  display: flex;
-  align-items: center;
-  max-width: 560px;
-  min-width: 220px;
-  gap: 10px;
+  max-width: 640px;
+  min-width: 240px;
   background: var(--panel-bg);
   border: 1px solid var(--border-light);
-  border-radius: 999px;
-  padding: 10px 14px;
-  min-width: 0;
+  padding: 14px 18px;
 }
 
 .searchInput {
@@ -103,28 +69,50 @@
   outline: none;
   background: transparent;
   color: var(--navbar-text);
-  font-size: 14px;
+  font-size: 15px;
   min-width: 0;
 }
 
 .actions {
-  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  padding: 10px 14px;
+}
+
+.iconButton {
+  position: relative;
+  border: none;
+  background: var(--surface-soft);
+  color: var(--navbar-text);
+  cursor: pointer;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 999px;
+}
+
+.loginButton {
+  position: relative;
+  border: none;
+  background: var(--surface-soft);
+  color: var(--navbar-text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 999px;
 }
 
 .address {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border: 1px solid var(--border-muted);
-  border-radius: 999px;
-  padding: 10px 14px;
-  background: var(--surface-soft);
-  color: var(--navbar-text);
-  cursor: default;
-  min-width: 170px;
-  flex-shrink: 0;
+  flex: 0 0 auto;
+  min-width: 200px;
+  padding: 12px 16px;
 }
 
 .addressLabel {
@@ -135,16 +123,6 @@
 .addressLocation {
   font-size: 14px;
   font-weight: 600;
-}
-
-.iconButton {
-  position: relative;
-  border: none;
-  background: transparent;
-  color: var(--navbar-text);
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 999px;
 }
 
 .badge {
@@ -169,7 +147,7 @@
   align-items: center;
   gap: 8px;
   border: 1px solid var(--border-muted);
-  border-radius: 999px;
+  border-radius: 18px;
   padding: 10px 14px;
   background: var(--surface-soft);
   color: var(--navbar-text);
@@ -196,7 +174,7 @@
 @media (max-width: 720px) {
   .navbar {
     padding: 14px 18px;
-    min-height: 210px;
+    min-height: 220px;
   }
 
   .left,
@@ -212,18 +190,19 @@
   }
 
   .actions {
-    order: 1;
+    order: 2;
     justify-content: flex-end;
     gap: 10px;
+    padding: 12px 14px;
   }
 
   .address {
-    order: 2;
+    order: 3;
     margin-top: 12px;
   }
 
   .searchForm {
-    order: 3;
+    order: 4;
     margin-top: 12px;
   }
 
