@@ -199,7 +199,7 @@
 
 @media (max-width: 720px) {
   .navbar {
-    padding: 14px 18px;
+    padding: 0;
     min-height: auto;
   }
 
@@ -209,9 +209,10 @@
     grid-template-areas:
       "left actions"
       "searchForm searchForm";
-    gap: 12px;
+    gap: 8px;
     align-items: center;
     width: 100%;
+    padding: 8px 0;
   }
 
   .left {
@@ -219,6 +220,7 @@
     width: auto;
     min-width: 0;
     justify-content: flex-start;
+    padding-left: 10px;
   }
 
   .logo {
@@ -236,15 +238,18 @@
     grid-area: actions;
     width: auto;
     justify-content: flex-end;
-    gap: 10px;
-    padding: 8px 10px;
+    gap: 8px;
+    padding: 4px 10px 4px 0;
     flex-wrap: nowrap;
   }
 
   .searchForm {
     grid-area: searchForm;
-    width: 100%;
-    margin-top: 0;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    padding: 10px 12px;
+    border-radius: 999px;
+    justify-content: center;
   }
 
   .addressLocation {
