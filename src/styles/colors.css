@@ -20,4 +20,6 @@
   --surface-soft: rgba(255, 255, 255, 0.08);
   --border-light: rgba(180, 163, 132, 0.22);
   --border-muted: rgba(180, 163, 132, 0.32);
+  --millettvan: #f0c300;
+  --millettvan-hover: #d8a400;
 }

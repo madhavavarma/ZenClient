@@ -31,15 +31,18 @@
 .left {
   flex: 0 0 auto;
   min-width: 180px;
+  padding: 0;
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 0.5px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #D4A017;
 }
 
 .logoCircle {
@@ -115,6 +118,12 @@
   padding: 12px 16px;
 }
 
+.addressButton {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+}
+
 .addressLabel {
   font-size: 12px;
   color: var(--text-muted);
@@ -173,37 +182,58 @@
 
 @media (max-width: 720px) {
   .navbar {
+    display: grid;
+    grid-template-columns: minmax(0, auto) auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "left actions"
+      "searchForm searchForm";
+    gap: 12px;
     padding: 14px 18px;
-    min-height: 220px;
-  }
-
-  .left,
-  .actions,
-  .address,
-  .searchForm {
-    width: 100%;
+    min-height: auto;
+    align-items: center;
   }
 
   .left {
-    order: 1;
-    justify-content: space-between;
+    grid-area: left;
+    width: auto;
+    min-width: 0;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    font-size: 1rem;
+    gap: 8px;
+  }
+
+  .logoCircle {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
   }
 
   .actions {
-    order: 2;
+    grid-area: actions;
+    width: auto;
     justify-content: flex-end;
     gap: 10px;
-    padding: 12px 14px;
-  }
-
-  .address {
-    order: 3;
-    margin-top: 12px;
+    padding: 8px 10px;
+    flex-wrap: nowrap;
   }
 
   .searchForm {
-    order: 4;
-    margin-top: 12px;
+    grid-area: searchForm;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .addressLocation {
+    display: none;
+  }
+
+  .address {
+    min-width: auto;
+    padding: 12px 10px;
   }
 
   .loginButton span {

@@ -25,6 +25,7 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "@axe-core/react": "^4.10.2",
     "@eslint/js": "^10.0.1",
     "@types/node": "^24.13.2",
     "@types/react": "^19.2.17",

@@ -44,6 +44,36 @@ body {
   margin: 0;
 }
 
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 1rem;
+  z-index: 1000;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: var(--navbar-bg);
+  color: #fff;
+  text-decoration: none;
+  transition: top 180ms ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.millettvan-text {
+  color: var(--millettvan);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 150ms ease;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.millettvan-text:hover {
+  color: var(--millettvan-hover);
+}
+
 h1,
 h2 {
   font-family: var(--heading);
@@ -59,6 +89,10 @@ h1 {
     font-size: 36px;
     margin: 20px 0;
   }
+}
+
+.home-heading {
+  margin-bottom: 12px !important;
 }
 h2 {
   font-size: 24px;

@@ -5,6 +5,8 @@ export const colors = {
   textOnDark: '#f6f2e7',
   textMuted: '#a0ad88',
   cartBadge: '#c07944',
+  millettvan: '#f0c300',
+  millettvanHover: '#d8a400',
   textDark: '#323822',
   borderLight: 'rgba(180,163,132,0.22)',
   borderMuted: 'rgba(180,163,132,0.32)',
