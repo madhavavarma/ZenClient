@@ -24,14 +24,15 @@ export default function Navbar({
 
   return (
     <header className={styles.navbar}>
-      <div className={styles.left}>
-        <a href="/" className={styles.logo} aria-label={`Go to ${brand} home`}>
-          <span className={styles.logoCircle}>M</span>
-          <span>{brand}</span>
-        </a>
-      </div>
+      <div className={styles.pageLayout}>
+        <div className={styles.left}>
+          <a href="/" className={styles.logo} aria-label={`Go to ${brand} home`}>
+            <span className={styles.logoCircle}>M</span>
+            <span>{brand}</span>
+          </a>
+        </div>
 
-      <form
+        <form
         className={styles.searchForm}
         onSubmit={(event) => {
           event.preventDefault();
@@ -51,19 +52,20 @@ export default function Navbar({
         />
       </form>
 
-      <div className={styles.actions}>
-        <button className={`${styles.iconButton} ${styles.addressButton}`} type="button" aria-label={`Location: ${location}`}>
-          <MapPin size={18} />
-        </button>
+        <div className={styles.actions}>
+          <button className={`${styles.iconButton} ${styles.addressButton}`} type="button" aria-label={`Location: ${location}`}>
+            <MapPin size={18} />
+          </button>
 
-        <button className={styles.iconButton} onClick={onCartClick} aria-label="Open cart">
-          <ShoppingCart size={20} />
-          {cartCount > 0 && <span className={styles.badge}>{cartCount}</span>}
-        </button>
+          <button className={styles.iconButton} onClick={onCartClick} aria-label="Open cart">
+            <ShoppingCart size={20} />
+            {cartCount > 0 && <span className={styles.badge}>{cartCount}</span>}
+          </button>
 
-        <button className={styles.iconButton} onClick={onLogin} type="button" aria-label="Login">
-          <User size={18} />
-        </button>
+          <button className={styles.iconButton} onClick={onLogin} type="button" aria-label="Login">
+            <User size={18} />
+          </button>
+        </div>
       </div>
     </header>
   );

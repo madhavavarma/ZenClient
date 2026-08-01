@@ -3,7 +3,7 @@ import TrustStrip from '../components/trust/TrustStrip';
 
 export default function Home() {
   return (
-    <section className="w-full max-w-6xl text-center px-3 sm:px-4 lg:px-0">
+    <section className="w-full text-center px-0 pt-0">
       <div className="mb-6">
         <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--accent)] mb-2">
           Organic living, reimagined

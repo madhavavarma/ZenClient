@@ -3,16 +3,33 @@
   top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 18px 32px;
   background: var(--navbar-bg);
   color: var(--navbar-text);
   box-shadow: var(--navbar-shadow);
   z-index: 50;
+}
+
+.pageLayout {
+  width: min(100%, 72rem);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 1rem;
   flex-wrap: wrap;
+}
+
+@media (min-width: 640px) {
+  .pageLayout {
+    padding: 18px 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pageLayout {
+    padding: 18px 0;
+  }
 }
 
 .left,
@@ -182,16 +199,19 @@
 
 @media (max-width: 720px) {
   .navbar {
+    padding: 14px 18px;
+    min-height: auto;
+  }
+
+  .pageLayout {
     display: grid;
-    grid-template-columns: minmax(0, auto) auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: auto 1fr auto;
     grid-template-areas:
       "left actions"
       "searchForm searchForm";
     gap: 12px;
-    padding: 14px 18px;
-    min-height: auto;
     align-items: center;
+    width: 100%;
   }
 
   .left {

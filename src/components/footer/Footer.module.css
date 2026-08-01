@@ -1,17 +1,30 @@
 .footer {
   width: 100%;
-  padding: 42px 24px 24px;
+  padding: 42px 1rem 24px;
   background: var(--bg);
   color: var(--text);
-  martin-top: 48px;
+  margin-top: 48px;
   border-top: 1px solid var(--border);
+}
+
+@media (min-width: 640px) {
+  .footer {
+    padding: 42px 1.5rem 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: 42px 0 24px;
+  }
 }
 
 .footerInner {
   display: grid;
   grid-template-columns: repeat(4, minmax(160px, 1fr));
   gap: 32px;
-  max-width: 1280px;
+  max-width: 72rem;
+  width: min(100%, 72rem);
   margin: 0 auto;
   padding-bottom: 24px;
   border-bottom: none;
@@ -117,7 +130,8 @@
 }
 
 .footerBottom {
-  max-width: 1280px;
+  max-width: 72rem;
+  width: min(100%, 72rem);
   margin: 24px auto 0;
   padding-top: 18px;
   display: flex;
