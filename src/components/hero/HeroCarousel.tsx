@@ -35,7 +35,7 @@ export default function HeroCarousel() {
 
   return (
     <section
-      className={styles.heroSection}
+      className={`${styles.heroSection} w-full`}
       aria-label="Featured organic products"
       aria-roledescription="carousel"
     >
