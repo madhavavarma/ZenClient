@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className={styles.footerBrand}>
           <span className={styles.footerLogo}>MILLETVAAN</span>
           <p className={styles.footerDescription}>
-            The way to healthy Lifestyle.
+            The way to healthy lifestyle.
           </p>
         </div>
 
