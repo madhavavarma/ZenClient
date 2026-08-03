@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className={styles.footerBottom}>
-        <div className={styles.trademark}>© {new Date().getFullYear()} MILLETVAAN LLC. All rights reserved. (1.0.0)</div>
+        <div className={styles.trademark}>© {new Date().getFullYear()} MILLETVAAN LLC. All rights reserved. (1.1.0)</div>
         <div className={styles.socialIcons}>
           <a href="https://facebook.com" aria-label="Visit our Facebook page" className={styles.socialLink}><Share2 size={18} /></a>
           <a href="https://twitter.com" aria-label="Visit our X page" className={styles.socialLink}><X size={18} /></a>

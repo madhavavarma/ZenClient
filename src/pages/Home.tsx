@@ -1,4 +1,5 @@
 import HeroCarousel from '../components/hero/HeroCarousel';
+import ProductCards from '../components/products/ProductCards';
 import TrustStrip from '../components/trust/TrustStrip';
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
 
       <HeroCarousel />
       <TrustStrip />
+      <ProductCards />
     </section>
   );
 }
